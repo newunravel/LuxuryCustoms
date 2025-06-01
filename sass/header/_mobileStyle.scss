@@ -1,0 +1,54 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.navigation-mob {
+  display: block;
+}
+
+.navigation-mob__list {
+  margin-top: 50px;
+}
+
+.navigation-mob__list .navigation-mob__item + .navigation-mob__item {
+  margin-top: 30px;
+}
+
+.navigation-mob__link {
+  font-family: $text-style;
+  color: $text-white-color;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 28px;
+
+  transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+  }
+
+  &.current {
+    color: $hover-color;
+  }
+}
+
+.mobile-page {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-page .mobile-page__item + .mobile-page__item {
+  margin-left: 20px;
+}
+
+.mobile-page__link {
+  font-family: $text-style;
+  color: $logo-color;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 28px;
+}

@@ -1,0 +1,35 @@
+.footer-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__address {
+  text-align: center;
+}
+
+.footer__logo {
+  font-family: $logo-style;
+  font-weight: 700;
+  font-size: 50px;
+  color: $logo-color;
+}
+
+.address {
+  margin-top: 25px;
+}
+
+.street {
+  font-size: $text-style;
+  color: $text-white-color;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.number {
+  font-size: $text-style;
+  color: $text-white-color;
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 15px;
+}

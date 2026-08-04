@@ -2,173 +2,709 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap"
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/main.min.css" />
-    <title>LuxuryCustoms</title>
+
+    <!-- Live Sass Compiler создаёт этот файл -->
+    <link rel="stylesheet" href="./sass/main.css" />
+
+    <title>Services | Luxury Customs</title>
   </head>
+
   <body class="body">
-    <header class="header">
-      <div class="container header-container">
-        <nav class="navigation">
-          <a class="logo" href="./index.html">LuxuryCustoms</a>
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a class="navigation__link" href="./index.html">Main</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link current" href="./Types-Of-Work.html"
-                >Types Of Work</a
-              >
-            </li>
-          </ul>
-          <button
-            type="button"
-            class="menu-toggle js-open-menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <svg width="40" height="40">
-              <use
-                class="button-mobile__icon"
-                href="./images/sprite/sprite.svg#icon-menu"
-              ></use>
-            </svg>
-          </button>
-        </nav>
-        <ul class="header-pages__list">
-          <li class="header-pages__item">
-            <a class="header-pages__link" href="https://t.me/+12538881925">
-              <svg class="header-pages__icon">
-                <use href="./images/sprite/sprite.svg#icon-telegram"></use>
-              </svg>
+    <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <nav class="navigation" aria-label="Main navigation">
+        <a
+          class="logo"
+          href="./index.html"
+          aria-label="Luxury Customs home"
+        >
+          <span class="logo__main">Luxury</span>
+          <span class="logo__accent">Customs</span>
+          <span class="logo__dot">.</span>
+        </a>
+
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a
+              class="navigation__link"
+              href="./index.html"
+            >
+              Home
             </a>
           </li>
-          <li class="header-pages__item">
+
+          <li class="navigation__item">
             <a
-              class="header-pages__link"
-              href="https://www.facebook.com/share/1EUSdve34e/?mibextid=wwXIfr"
+              class="navigation__link current"
+              href="./services.html"
             >
-              <svg class="header-pages__icon">
-                <use href="./images/sprite/sprite.svg#icon-facebook"></use>
-              </svg>
+              Services
             </a>
           </li>
         </ul>
-        <!-- mobile menu -->
-        <div class="mobile-menu js-menu-container" id="mobile-menu">
-          <button type="button" class="menu-toggle js-close-menu">
-            <svg width="40" height="40">
+
+        <button
+          class="menu-toggle js-open-menu"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="26" height="26">
+            <use
+              class="button-mobile__icon"
+              href="./images/sprite/sprite.svg#icon-menu"
+            ></use>
+          </svg>
+        </button>
+      </nav>
+
+      <ul class="header-pages__list">
+        <li class="header-pages__item">
+          <a
+            class="header-pages__link"
+            href="https://t.me/+12538881925"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Telegram"
+          >
+            <svg class="header-pages__icon">
               <use
-                class="mobile-close__icon"
-                href="./images/sprite/sprite.svg#icon-close-menu"
+                href="./images/sprite/sprite.svg#icon-telegram"
               ></use>
             </svg>
-          </button>
-          <div class="menu">
-            <nav class="navigation-mob">
-              <a class="menu-logo" href="./index.html">LuxuryCustoms</a>
-              <ul class="navigation-mob__list">
-                <li class="navigation-mob__item">
-                  <a class="navigation-mob__link" href="./index.html">Main</a>
-                </li>
-                <li class="navigation-mob__item">
-                  <a class="navigation-mob__link" href="./Types-Of-Work.html"
-                    >Types Of Work</a
-                  >
-                </li>
-              </ul>
-            </nav>
-            <ul class="mobile-page">
-              <li class="mobile-page__item">
-                <a class="mobile-page__link" href="https://t.me/+12538881925"
-                  >Telegram
+          </a>
+        </li>
+
+        <li class="header-pages__item">
+          <a
+            class="header-pages__link"
+            href="https://www.facebook.com/share/1EUSdve34e/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <svg class="header-pages__icon">
+              <use
+                href="./images/sprite/sprite.svg#icon-facebook"
+              ></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <div
+        class="mobile-menu js-menu-container"
+        id="mobile-menu"
+      >
+        <button
+          class="menu-toggle js-close-menu"
+          type="button"
+          aria-label="Close menu"
+        >
+          <svg width="26" height="26">
+            <use
+              class="mobile-close__icon"
+              href="./images/sprite/sprite.svg#icon-close-menu"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="menu">
+          <nav
+            class="navigation-mob"
+            aria-label="Mobile navigation"
+          >
+            <a class="menu-logo" href="./index.html">
+              <span class="logo__main">Luxury</span>
+              <span class="logo__accent">Customs</span>
+              <span class="logo__dot">.</span>
+            </a>
+
+            <ul class="navigation-mob__list">
+              <li class="navigation-mob__item">
+                <a
+                  class="navigation-mob__link"
+                  href="./index.html"
+                >
+                  Home
                 </a>
               </li>
-              <li class="mobile-page__item">
+
+              <li class="navigation-mob__item">
                 <a
-                  class="mobile-page__link"
-                  href="https://www.facebook.com/share/1EUSdve34e/?mibextid=wwXIfr"
-                  >Facebook
+                  class="navigation-mob__link current"
+                  href="./services.html"
+                >
+                  Services
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="mobile-page">
+            <li class="mobile-page__item">
+              <a
+                class="mobile-page__link"
+                href="https://t.me/+12538881925"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Telegram
+              </a>
+            </li>
+
+            <li class="mobile-page__item">
+              <a
+                class="mobile-page__link"
+                href="https://www.facebook.com/share/1EUSdve34e/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Services hero -->
+    <section class="services-hero" id="services">
+      <div class="container services-hero__container">
+        <div class="services-hero__grid">
+          <div class="services-hero__content">
+            <p class="services-hero__eyebrow">
+              Custom Automotive Services
+            </p>
+
+            <h1 class="services-hero__title">
+              Form. Finish.
+              <span>Presence.</span>
+            </h1>
+
+            <p class="services-hero__text">
+              Bodywork, paint, wraps, and tint—four ways to shape
+              how your vehicle looks and feels. Every project is
+              handled personally from the first idea to the final
+              inspection.
+            </p>
+
+            <div class="services-hero__actions">
+              <a
+                class="services-hero__button services-hero__button--primary"
+                href="#services-list"
+              >
+                Explore the Services
+              </a>
+
+              <a
+                class="services-hero__button services-hero__button--secondary"
+                href="tel:+12538881925"
+              >
+                Request an Estimate
+              </a>
+            </div>
+          </div>
+
+          <nav
+            class="services-hero__panel"
+            aria-label="Service directory"
+          >
+            <div class="services-hero__panel-heading">
+              <p>Service Directory</p>
+              <span>01—04</span>
+            </div>
+
+            <ol class="services-hero__directory">
+              <li>
+                <a href="#custom-bodywork">
+                  <span>01</span>
+                  Custom Bodywork
+                  <b aria-hidden="true">↘</b>
+                </a>
+              </li>
+
+              <li>
+                <a href="#custom-paint">
+                  <span>02</span>
+                  Custom Paint
+                  <b aria-hidden="true">↘</b>
+                </a>
+              </li>
+
+              <li>
+                <a href="#vehicle-wraps">
+                  <span>03</span>
+                  Vehicle Wraps
+                  <b aria-hidden="true">↘</b>
+                </a>
+              </li>
+
+              <li>
+                <a href="#window-tint">
+                  <span>04</span>
+                  Window Tint
+                  <b aria-hidden="true">↘</b>
+                </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services details -->
+    <section class="service-showcase" id="services-list">
+      <div class="container">
+        <div class="service-showcase__header">
+          <div>
+            <p class="service-showcase__eyebrow">
+              Services in Detail
+            </p>
+
+            <h2 class="service-showcase__title">
+              Choose the Change.
+              <span>Keep the Character.</span>
+            </h2>
+          </div>
+
+          <p class="service-showcase__intro">
+            Each service can stand alone or become part of a
+            complete transformation. The scope, materials, and
+            expected result are agreed upon before work begins.
+          </p>
+        </div>
+
+        <div class="service-showcase__list">
+          <!-- Bodywork -->
+          <article
+            class="service-card"
+            id="custom-bodywork"
+          >
+            <div
+              class="service-card__visual service-card__visual--bodywork"
+              aria-hidden="true"
+            >
+              <span class="service-card__visual-code">
+                Body / 01
+              </span>
+
+              <strong class="service-card__visual-word">
+                Form
+              </strong>
+            </div>
+
+            <div class="service-card__content">
+              <p class="service-card__eyebrow">
+                Service 01
+              </p>
+
+              <h2 class="service-card__title">
+                Custom Bodywork
+              </h2>
+
+              <p class="service-card__lead">
+                For vehicles that need more than a surface-level
+                change. Bodywork focuses on shape, fit, and the
+                foundation beneath the finish.
+              </p>
+
+              <ul class="service-card__features">
+                <li>Custom body modifications</li><li>Panel and surface refinement</li>
+                <li>Preparation for paint or wrap</li>
+              </ul>
+
+              <a
+                class="service-card__link"
+                href="tel:+12538881925"
+              >
+                Discuss Bodywork
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Paint -->
+          <article
+            class="service-card"
+            id="custom-paint"
+          >
+            <div
+              class="service-card__visual service-card__visual--paint"
+              aria-hidden="true"
+            >
+              <span class="service-card__visual-code">
+                Finish / 02
+              </span>
+
+              <strong class="service-card__visual-word">
+                Color
+              </strong>
+            </div>
+
+            <div class="service-card__content">
+              <p class="service-card__eyebrow">
+                Service 02
+              </p>
+
+              <h2 class="service-card__title">
+                Custom Paint
+              </h2>
+
+              <p class="service-card__lead">
+                A new color or carefully restored finish begins
+                with preparation. The final result depends on
+                every step before the first coat.
+              </p>
+
+              <ul class="service-card__features">
+                <li>Complete color changes</li>
+                <li>Local refinishing</li>
+                <li>Precision color matching</li>
+              </ul>
+
+              <a
+                class="service-card__link"
+                href="tel:+12538881925"
+              >
+                Discuss Paint
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Wraps -->
+          <article
+            class="service-card"
+            id="vehicle-wraps"
+          >
+            <div
+              class="service-card__visual service-card__visual--wraps"
+              aria-hidden="true"
+            >
+              <span class="service-card__visual-code">
+                Surface / 03
+              </span>
+
+              <strong class="service-card__visual-word">
+                Wrap
+              </strong>
+            </div>
+
+            <div class="service-card__content">
+              <p class="service-card__eyebrow">
+                Service 03
+              </p>
+
+              <h2 class="service-card__title">
+                Vehicle Wraps
+              </h2>
+
+              <p class="service-card__lead">
+                A flexible way to change your vehicle’s color,
+                finish, or graphic treatment while creating a
+                completely different presence.
+              </p>
+
+              <ul class="service-card__features">
+                <li>Full and partial wraps</li>
+                <li>Matte, gloss, and satin finishes</li>
+                <li>Careful preparation and installation</li>
+              </ul>
+
+              <a
+                class="service-card__link"
+                href="tel:+12538881925"
+              >
+                Discuss a Wrap
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Tint -->
+          <article
+            class="service-card"
+            id="window-tint"
+          >
+            <div
+              class="service-card__visual service-card__visual--tint"
+              aria-hidden="true"
+            >
+              <span class="service-card__visual-code">
+                Glass / 04
+              </span>
+
+              <strong class="service-card__visual-word">
+                Tint
+              </strong>
+            </div>
+
+            <div class="service-card__content">
+              <p class="service-card__eyebrow">
+                Service 04
+              </p>
+
+              <h2 class="service-card__title">
+                Window Tint
+              </h2>
+
+              <p class="service-card__lead">
+                A precise finish that can add privacy, improve
+                cabin comfort, and give the vehicle a cleaner
+                overall profile.
+              </p>
+
+              <ul class="service-card__features">
+                <li>Professional film installation</li><li>Shade and finish consultation</li>
+                <li>Clean and precise edge work</li>
+              </ul>
+
+              <a
+                class="service-card__link"
+                href="tel:+12538881925"
+              >
+                Discuss Tint
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="work-process">
+      <div class="container">
+        <div class="work-process__header">
+          <div>
+            <p class="work-process__eyebrow">
+              The Process
+            </p>
+
+            <h2 class="work-process__title">
+              From First Message.
+              <span>To Final Look.</span>
+            </h2>
+          </div>
+
+          <p class="work-process__intro">
+            You communicate directly with the person working on
+            your vehicle through every stage of the project.
+          </p>
+        </div>
+
+        <ol class="work-process__list">
+          <li class="work-process__item">
+            <span class="work-process__number">01</span>
+
+            <h3 class="work-process__item-title">
+              Conversation
+            </h3>
+
+            <p class="work-process__text">
+              We discuss your vehicle, the result you want, and
+              the current condition.
+            </p>
+          </li>
+
+          <li class="work-process__item">
+            <span class="work-process__number">02</span>
+
+            <h3 class="work-process__item-title">
+              Scope & Estimate
+            </h3>
+
+            <p class="work-process__text">
+              The work, materials, expected result, and estimate
+              are agreed upon.
+            </p>
+          </li>
+
+          <li class="work-process__item">
+            <span class="work-process__number">03</span>
+
+            <h3 class="work-process__item-title">
+              Hands-On Work
+            </h3>
+
+            <p class="work-process__text">
+              The project is completed with personal attention
+              through every stage.
+            </p>
+          </li>
+
+          <li class="work-process__item">
+            <span class="work-process__number">04</span>
+
+            <h3 class="work-process__item-title">
+              Final Walkthrough
+            </h3>
+
+            <p class="work-process__text">
+              We inspect the completed result together before the
+              vehicle is handed back.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__cta">
+          <div>
+            <p class="footer__eyebrow">
+              <span>03</span>
+              Start Your Project
+            </p>
+
+            <h2 class="footer__title">
+              Ready to Make
+              <span>It Yours?</span>
+            </h2>
+          </div>
+
+          <div class="footer__cta-content">
+            <p class="footer__text">
+              Tell me what you want to change. I’ll help you choose
+              the right approach for your vehicle, your vision, and
+              your budget.
+            </p>
+
+            <div class="footer__actions">
+              <a
+                class="footer__button footer__button--primary"
+                href="tel:+12538881925"
+              >
+                Call for an Estimate
+              </a>
+
+              <a
+                class="footer__button footer__button--secondary"
+                href="https://t.me/+12538881925"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Message on Telegram
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__divider"></div>
+
+        <div class="footer__main">
+          <div class="footer__brand">
+            <a
+              class="footer__logo"
+              href="./index.html"
+              aria-label="Luxury Customs home"
+            >
+              <span class="logo__main">Luxury</span>
+              <span class="logo__accent">Customs</span>
+              <span class="logo__dot">.</span>
+            </a>
+
+            <p class="footer__brand-text">
+              Independent custom automotive work in Tacoma,
+              Washington.
+            </p>
+          </div>
+
+          <div class="footer__column">
+            <p class="footer__label">Navigate</p>
+
+            <ul class="footer__navigation">
+              <li>
+                <a class="footer__link" href="./index.html">
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a class="footer__link" href="#services">
+                  Services
                 </a>
               </li>
             </ul>
           </div>
+
+          <div class="footer__column">
+            <p class="footer__label">Contact</p>
+
+            <address class="footer__address">
+              <a
+                class="footer__contact-link"
+                href="tel:+12538881925"
+              >
+                +1 (253) 888-1925
+              </a>
+
+              <p class="footer__location">
+                2519 104th St E<br />
+                Tacoma, WA 98445
+              </p>
+            </address>
+          </div>
         </div>
-      </div>
-    </header>
-    <main>
-      <section class="category">
-        <div class="container">
-          <h2 class="category__title">What can I do</h2>
-          <ul class="category__list">
-            <li class="category__item">
-              <div class="category-box">
-                <h3 class="category-box__title">Custom Body Work</h3>
-                <p class="category-box__text">
-                  I create unique body modifications tailored to your vision.
-                  Whether it’s aggressive styling or subtle enhancements.
-                </p>
-              </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            © 2026 Luxury Customs. All rights reserved.
+          </p>
+
+          <ul class="footer__socials">
+            <li>
+              <a
+                class="footer__social-link"
+                href="https://t.me/+12538881925"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Telegram ↗
+              </a>
             </li>
-            <li class="category__item">
-              <div class="category-box">
-                <h3 class="category-box__title">Painting</h3>
-                <p class="category-box__text">
-                  High quality car repainting with precise color matching and
-                  flawless finish. From complete repainting to minor touch-ups,
-                  I've got you covered.
-                </p>
-              </div>
-            </li>
-            <li class="category__item">
-              <div class="category-box">
-                <h3 class="category-box__title">Window Tint</h3>
-                <p class="category-box__text">
-                  Enhance your car’s look and comfort with professional window
-                  tinting. UV protection, privacy, and style — all in one
-                  service.
-                </p>
-              </div>
-            </li>
-            <li class="category__item">
-              <div class="category-box">
-                <h3 class="category-box__title">Vehicle Wrapping</h3>
-                <p class="category-box__text">
-                  Transform your vehicle’s appearance with custom wraps. Choose
-                  from matte, gloss, carbon, or printed designs to stand out on
-                  the road.
-                </p>
-              </div>
+
+            <li>
+              <a
+                class="footer__social-link"
+                href="https://www.facebook.com/share/1EUSdve34e/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook ↗
+              </a>
             </li>
           </ul>
         </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="container footer-container">
-        <div class="footer__address">
-          <a class="footer__logo" href="./index.html">LuxuryCustoms</a>
-          <address class="address">
-            <p class="street">2519 104th St E Tacoma 98445</p>
-            <p class="number">+1-(253)-888-1925</p>
-          </address>
-        </div>
       </div>
     </footer>
-    <script src="https://unpkg.com/body-scroll-lock/lib/bodyScrollLock.min.js"></script>
 
+    <script src="https://unpkg.com/body-scroll-lock/lib/bodyScrollLock.min.js"></script>
     <script src="./js/menu.js"></script>
   </body>
 </html>

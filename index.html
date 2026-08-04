@@ -28,157 +28,165 @@
 
   <body class="body">
     <!-- Header -->
-    <header class="header">
-      <div class="container header-container">
-        <nav class="navigation" aria-label="Main navigation">
-          <a class="logo" href="./index.html">
-            LuxuryCustoms
-          </a>
+  <header class="header">
+    <div class="container header-container">
+      <nav class="navigation" aria-label="Main navigation">
+        <a
+          class="logo"
+          href="./index.html"
+          aria-label="Luxury Customs home"
+        >
+          <span class="logo__main">Luxury</span>
+          <span class="logo__accent">Customs</span>
+          <span class="logo__dot">.</span>
+        </a>
 
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a
-                class="navigation__link current"
-                href="./index.html"
-              >
-                Main
-              </a>
-            </li>
-
-            <li class="navigation__item">
-              <a
-                class="navigation__link"
-                href="./Types-Of-Work.html"
-              >
-                Types Of Work
-              </a>
-            </li>
-          </ul>
-
-          <button
-            class="menu-toggle js-open-menu"
-            type="button"
-            aria-label="Open menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <svg width="40" height="40">
-              <use
-                class="button-mobile__icon"
-                href="./images/sprite/sprite.svg#icon-menu"
-              ></use>
-            </svg>
-          </button>
-        </nav>
-
-        <ul class="header-pages__list">
-          <li class="header-pages__item">
+        <ul class="navigation__list">
+          <li class="navigation__item">
             <a
-              class="header-pages__link"
-              href="https://t.me/+12538881925"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Telegram"
+              class="navigation__link current"
+              href="./index.html"
             >
-              <svg class="header-pages__icon">
-                <use
-                  href="./images/sprite/sprite.svg#icon-telegram"
-                ></use>
-              </svg>
+              Home
             </a>
           </li>
 
-          <li class="header-pages__item">
+          <li class="navigation__item">
             <a
-              class="header-pages__link"
-              href="https://www.facebook.com/share/1EUSdve34e/?mibextid=wwXIfr"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
+              class="navigation__link"
+              href="./Types-Of-Work.html"
             >
-              <svg class="header-pages__icon">
-                <use
-                  href="./images/sprite/sprite.svg#icon-facebook"
-                ></use>
-              </svg>
+              Services
             </a>
           </li>
         </ul>
 
-        <!-- Mobile menu -->
-        <div
-          class="mobile-menu js-menu-container"
-          id="mobile-menu"
+        <button
+          class="menu-toggle js-open-menu"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
         >
-          <button
-            class="menu-toggle js-close-menu"
-            type="button"
-            aria-label="Close menu"
+          <svg width="26" height="26">
+            <use
+              class="button-mobile__icon"
+              href="./images/sprite/sprite.svg#icon-menu"
+            ></use>
+          </svg>
+        </button>
+      </nav>
+
+      <ul class="header-pages__list">
+        <li class="header-pages__item">
+          <a
+            class="header-pages__link"
+            href="https://t.me/+12538881925"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Telegram"
           >
-            <svg width="40" height="40">
+            <svg class="header-pages__icon">
               <use
-                class="mobile-close__icon"
-                href="./images/sprite/sprite.svg#icon-close-menu"
+                href="./images/sprite/sprite.svg#icon-telegram"
               ></use>
             </svg>
-          </button>
+          </a>
+        </li>
 
-          <div class="menu">
-            <nav
-              class="navigation-mob"
-              aria-label="Mobile navigation"
-            >
-              <a class="menu-logo" href="./index.html">
-                LuxuryCustoms
-              </a>
+        <li class="header-pages__item">
+          <a
+            class="header-pages__link"
+            href="https://www.facebook.com/share/1EUSdve34e/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <svg class="header-pages__icon">
+              <use
+                href="./images/sprite/sprite.svg#icon-facebook"
+              ></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
 
-              <ul class="navigation-mob__list">
-                <li class="navigation-mob__item">
-                  <a
-                    class="navigation-mob__link current"
-                    href="./index.html"
-                  >
-                    Main
-                  </a>
-                </li>
+      <div
+        class="mobile-menu js-menu-container"
+        id="mobile-menu"
+      >
+        <button
+          class="menu-toggle js-close-menu"
+          type="button"
+          aria-label="Close menu"
+        >
+          <svg width="26" height="26">
+            <use
+              class="mobile-close__icon"
+              href="./images/sprite/sprite.svg#icon-close-menu"
+            ></use>
+          </svg>
+        </button>
 
-                <li class="navigation-mob__item">
-                  <aclass="navigation-mob__link"
-                    href="./Types-Of-Work.html"
-                  >
-                    Types Of Work
-                  </aclass=>
-                </li>
-              </ul>
-            </nav>
+        <div class="menu">
+          <nav
+            class="navigation-mob"
+            aria-label="Mobile navigation"
+          >
+            <a class="menu-logo" href="./index.html">
+              <span class="logo__main">Luxury</span>
+              <span class="logo__accent">Customs</span>
+              <span class="logo__dot">.</span>
+            </a>
 
-            <ul class="mobile-page">
-              <li class="mobile-page__item">
+            <ul class="navigation-mob__list">
+              <li class="navigation-mob__item">
                 <a
-                  class="mobile-page__link"
-                  href="https://t.me/+12538881925"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  class="navigation-mob__link current"
+                  href="./index.html"
                 >
-                  Telegram
+                  Home
                 </a>
               </li>
 
-              <li class="mobile-page__item">
+              <li class="navigation-mob__item">
                 <a
-                  class="mobile-page__link"
-                  href="https://www.facebook.com/share/1EUSdve34e/?mibextid=wwXIfr"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  class="navigation-mob__link"
+                  href="./Types-Of-Work.html"
                 >
-                  Facebook
+                  Services
                 </a>
               </li>
             </ul>
-          </div>
+          </nav>
+
+          <ul class="mobile-page">
+            <li class="mobile-page__item">
+              <a
+                class="mobile-page__link"
+                href="https://t.me/+12538881925"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Telegram
+              </a>
+            </li>
+
+            <li class="mobile-page__item">
+              <a
+                class="mobile-page__link"
+                href="https://www.facebook.com/share/1EUSdve34e/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
     <main>
       <!-- Hero -->

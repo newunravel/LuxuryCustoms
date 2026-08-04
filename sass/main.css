@@ -425,58 +425,152 @@ body.no-scroll {
 }
 
 .hero {
-  padding-top: 150px;
-  padding-bottom: 150px;
-}
-@media screen and (min-width: 1200px) {
-  .hero {
-    background-image: url(../images/hero/hero-desktop1x.jpg);
-    padding-top: 200px;
-    padding-bottom: 200px;
-    max-width: 1600px;
-  }
-}
-@media screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: url(../images/hero/hero-desktop2x.jpg);
-  }
-}
-.hero {
+  min-height: 720px;
+  padding-top: 64px;
+  padding-bottom: 48px;
+  display: flex;
+  background-image: linear-gradient(180deg, rgba(3, 2, 2, 0.18) 0%, rgba(3, 2, 2, 0.05) 58%, rgba(3, 2, 2, 0.45) 100%), url(../images/hero/hero-mobile.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    min-height: 680px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    align-items: center;
+    background-image: linear-gradient(90deg, rgba(3, 2, 2, 0.88) 0%, rgba(3, 2, 2, 0.58) 34%, rgba(3, 2, 2, 0.08) 68%), url(../images/hero/hero-desktop.webp);
+    background-position: center;
+  }
+}
+
+.hero__container {
+  width: 100%;
+}
+
+.hero__content {
+  max-width: 600px;
   margin-right: auto;
   margin-left: auto;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .hero__content {
+    margin-left: 0;
+    text-align: left;
+  }
+}
+
+.hero__eyebrow {
+  margin-bottom: 16px;
+  color: #a3ff12;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .hero__eyebrow {
+    font-size: 14px;
+  }
 }
 
 .hero__title {
-  color: #cad5df;
-  font-weight: 400;
-  font-size: 30px;
+  margin-bottom: 24px;
+  color: #f5f2fb;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(44px, 13vw, 64px);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+.hero__title span {
+  display: block;
+  color: #a970ff;
+  text-shadow: 0 0 28px rgba(139, 61, 255, 0.32);
 }
 @media screen and (min-width: 768px) {
   .hero__title {
-    font-size: 50px;
+    font-size: clamp(58px, 6vw, 82px);
   }
-}
-.hero__title {
-  line-height: 70px;
-  text-align: center;
-  text-transform: uppercase;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .hero__text {
-  color: #cad5df;
-  margin: 0 100px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  line-height: 1.5;
-  margin-left: auto;
+  max-width: 520px;
   margin-right: auto;
-  text-align: center;
+  margin-bottom: 32px;
+  margin-left: auto;
+  color: rgba(245, 242, 251, 0.78);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+@media screen and (min-width: 768px) {
+  .hero__text {
+    margin-left: 0;
+    font-size: 18px;
+  }
+}
+
+.hero__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media screen and (min-width: 450px) {
+  .hero__actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__actions {
+    justify-content: flex-start;
+  }
+}
+
+.hero__button {
+  min-height: 52px;
+  padding: 15px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #f5f2fb;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 220ms ease, background-color 220ms ease, border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+}
+.hero__button:hover, .hero__button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.hero__button--primary {
+  background-color: #7c3aed;
+  box-shadow: 0 0 26px rgba(124, 58, 237, 0.28);
+}
+.hero__button--primary:hover, .hero__button--primary:focus-visible {
+  background-color: #a3ff12;
+  color: #08060c;
+  box-shadow: 0 0 30px rgba(163, 255, 18, 0.25);
+}
+
+.hero__button--secondary {
+  border-color: rgba(245, 242, 251, 0.42);
+  background-color: rgba(5, 3, 8, 0.36);
+}
+.hero__button--secondary:hover, .hero__button--secondary:focus-visible {
+  border-color: #a970ff;
+  background-color: rgba(124, 58, 237, 0.14);
 }
 
 .about-us {

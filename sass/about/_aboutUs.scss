@@ -1,17 +1,243 @@
 .about-us {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+
+  padding-top: 96px;
+  padding-bottom: 96px;
+
+  border-top: 1px solid rgba(169, 112, 255, 0.14);
+  border-bottom: 1px solid rgba(169, 112, 255, 0.14);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(124, 58, 237, 0.07),
+      transparent 40%
+    ),
+    #08060c;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -180px;
+    right: -180px;
+
+    width: 440px;
+    height: 440px;
+
+    border-radius: 50%;
+
+    background-color: rgba(124, 58, 237, 0.18);
+    filter: blur(120px);
+
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 90px;
+    left: 0;
+
+    width: 120px;
+    height: 2px;
+
+    background: linear-gradient(
+      90deg,
+      #a3ff12,
+      transparent
+    );
+
+    pointer-events: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+
+.about-us__container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-us__grid {
+  display: grid;
+  gap: 42px;
+
+  @media screen and (min-width: $tablet) {
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+    gap: 72px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 120px;
+  }
+}
+
+.about-us__eyebrow {
+  margin-bottom: 22px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: #a3ff12;
+  font-family: $h-style;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  span {
+    color: #a970ff;
+  }
+}
+
+.about-us__title {
+  color: #f5f2fb;
+  font-family: $h-style;
+  font-size: clamp(42px, 11vw, 62px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+
+  span {
+    display: block;
+    color: #a970ff;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: clamp(50px, 5vw, 72px);
+  }
+}
+
+.about-us__copy {
+  padding-left: 22px;
+  border-left: 2px solid rgba(163, 255, 18, 0.7);
+
+  @media screen and (min-width: $tablet) {
+    padding-left: 32px;
+  }
+}
+
+.about-us__lead {
+  margin-bottom: 24px;
+
+  color: #f5f2fb;
+  font-family: $h-style;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 26px;
+  }
 }
 
 .about-us__text {
-  color: $text-white-color;
-  margin-bottom: 0;
-
+  color: rgba(245, 242, 251, 0.66);
   font-family: $text-style;
+  font-size: 16px;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  line-height: 1.33333;
-  letter-spacing: 0.01em;
-  text-align: center;
+  line-height: 1.75;
+  text-align: left;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 17px;
+  }
+}
+
+.about-us__values {
+  margin-top: 64px;
+
+  display: grid;
+  gap: 16px;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 88px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.about-us__value {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 210px;
+  padding: 28px;
+
+  border: 1px solid rgba(169, 112, 255, 0.18);
+  border-radius: 16px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(169, 112, 255, 0.1),
+    rgba(245, 242, 251, 0.02)
+  );
+
+  transition:
+    border-color 220ms ease,
+    background-color 220ms ease,
+    transform 220ms ease;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: -35px;
+    bottom: -35px;
+
+    width: 90px;
+    height: 90px;
+
+    border: 1px solid rgba(163, 255, 18, 0.16);
+    border-radius: 50%;
+  }
+
+  &:hover {
+    border-color: rgba(163, 255, 18, 0.42);
+    background-color: rgba(163, 255, 18, 0.03);
+    transform: translateY(-4px);
+  }
+}
+
+.about-us__value-number {
+  color: #a3ff12;
+  font-family: $h-style;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.about-us__value-title {
+  margin-top: 34px;
+  margin-bottom: 14px;
+
+  color: #f5f2fb;
+  font-family: $h-style;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.about-us__value-text {
+  max-width: 300px;
+
+  color: rgba(245, 242, 251, 0.58);
+  font-family: $text-style;
+  font-size: 15px;
+  line-height: 1.65;
 }

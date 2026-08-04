@@ -429,7 +429,7 @@ body.no-scroll {
   padding-top: 64px;
   padding-bottom: 48px;
   display: flex;
-  background-image: linear-gradient(180deg, rgba(3, 2, 2, 0.18) 0%, rgba(3, 2, 2, 0.05) 58%, rgba(3, 2, 2, 0.45) 100%), url(../images/hero/hero-mobile.webp);
+  background-image: linear-gradient(180deg, rgba(3, 2, 2, 0.18) 0%, rgba(3, 2, 2, 0.05) 58%, rgba(3, 2, 2, 0.45) 100%), url(../../images/hero/hero-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -440,7 +440,7 @@ body.no-scroll {
     padding-top: 120px;
     padding-bottom: 120px;
     align-items: center;
-    background-image: linear-gradient(90deg, rgba(3, 2, 2, 0.88) 0%, rgba(3, 2, 2, 0.58) 34%, rgba(3, 2, 2, 0.08) 68%), url(../images/hero/hero-desktop.webp);
+    background-image: linear-gradient(90deg, rgba(3, 2, 2, 0.88) 0%, rgba(3, 2, 2, 0.58) 34%, rgba(3, 2, 2, 0.08) 68%), url(../../images/hero/hero-desktop.jpg);
     background-position: center;
   }
 }
